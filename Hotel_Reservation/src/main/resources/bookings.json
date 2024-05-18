@@ -1,0 +1,24 @@
+[
+  {
+    "user": {
+      "id": 1
+    },
+    "room": {
+      "id": 7
+    },
+    "startDate": "2024-05-20",
+    "endDate": "2024-05-22",
+    "status": "CONFIRMED"
+  },
+  {
+    "user": {
+      "id": 1
+    },
+    "room": {
+      "id": 4
+    },
+    "startDate": "2024-05-24",
+    "endDate": "2024-05-26",
+    "status": "CONFIRMED"
+  }
+]

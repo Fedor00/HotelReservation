@@ -1,0 +1,90 @@
+# Git ignore file for Java projects
+
+# Target and build directories
+/target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+/build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+/.mvn/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Gradle
+.gradle/
+/build/
+/gradle-app.setting
+
+# Eclipse
+/.metadata
+/.recommenders
+/.settings
+/.classpath
+/.project
+/.factorypath
+/.apt_generated
+/.springBeans
+/.sts4-cache
+
+# IntelliJ IDEA
+/.idea
+*.iws
+*.iml
+*.ipr
+.idea/
+*.iml
+*.ipr
+.idea/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# VS Code
+/.vscode/
+
+# Logs
+logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Compiled files
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# Temporary files
+tmp/
+*.tmp
+*.bak
+*.swp
+
+# Dependency directories
+node_modules/
+bower_components/
+
+# System Files
+*.pid
+
+# Others
+**/out/
