@@ -40,7 +40,7 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())  // CSRF protection is not needed for stateless APIs typically consumed by non-browser clients.
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/hotel/all").permitAll()  // Permit all requests to /hotel/all without authentication.
-                        .requestMatchers("/hotel/**", "/room/**","/booking/**").authenticated()  // Require authentication for all other paths under /hotel and /room.
+                        .requestMatchers("/hotel/**", "/room/**","/booking/**","/feedback/**").authenticated()  // Require authentication for all other paths under /hotel and /room.
                         .requestMatchers("/auth/welcome", "/auth/addNewUser", "/auth/generateToken").permitAll()  // Explicitly allow certain /auth endpoints.
                         .requestMatchers("/auth/user/**", "/auth/admin/**").authenticated())  // Enforce authentication for specific /auth paths.
                 .sessionManagement(sess -> sess

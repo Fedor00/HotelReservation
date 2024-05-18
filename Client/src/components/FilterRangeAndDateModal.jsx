@@ -17,11 +17,19 @@ function FilterRangeAndDateModal({
 }) {
   const [range, setRange] = useState(distance);
   const onApply = () => {
-    if (
-      new Date(from) <= new Date(to) &&
-      distance > 0 &&
-      new Date() <= new Date(from)
-    ) {
+    const fromDate = new Date(from);
+    fromDate.setHours(0, 0, 0, 0);
+
+    const toDate = new Date(to);
+    toDate.setHours(0, 0, 0, 0);
+
+    const currentDate = new Date();
+    currentDate.setHours(0, 0, 0, 0);
+    if (range <= 0) {
+      alert("Please enter a valid distance");
+      return;
+    }
+    if (fromDate <= toDate && currentDate <= fromDate) {
       setOpen(false);
       setDistance(range);
     } else {
@@ -30,6 +38,7 @@ function FilterRangeAndDateModal({
       );
     }
   };
+
   return (
     <Modal isOpen={open} onClose={onApply}>
       <div className="flex flex-col justify-center items-center ">
